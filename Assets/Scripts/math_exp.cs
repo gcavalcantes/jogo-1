@@ -27,7 +27,7 @@ public class math_exp : MonoBehaviour
     };
     List<string> expressao3 = new List<string>
     {
-        "789", "x", "11", "=", "8679"
+        "789", "*", "11", "=", "8679"
     };
     List<string> expressao4 = new List<string>
     {
@@ -51,11 +51,11 @@ public class math_exp : MonoBehaviour
     };
     List<string> expressao9 = new List<string>
     {
-        "1000", "-", "438", "=", "562"
+        "613", "-", "605", "=", "8"
     };
     List<string> expressao10 = new List<string>
     {
-        "1000", "-", "438", "=", "562"
+        "94", "*", "13", "=", "562"
     };
 
 }
