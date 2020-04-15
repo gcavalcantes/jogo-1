@@ -15,4 +15,47 @@ public class math_exp : MonoBehaviour
     {
         
     }
+
+    // Lista de expressões que são utilizados
+    List<string> expressao1 = new List<string>
+    {
+        "8", "+", "8", "=", "16"
+    };
+    List<string> expressao2 = new List<string>
+    {
+        "1000", "-", "438", "=", "562"
+    };
+    List<string> expressao3 = new List<string>
+    {
+        "789", "x", "11", "=", "8679"
+    };
+    List<string> expressao4 = new List<string>
+    {
+        "450", "/", "50", "=", "9"
+    };
+    List<string> expressao5 = new List<string>
+    {
+        "20", "-", "373", "=", "-353"
+    };
+    List<string> expressao6 = new List<string>
+    {
+        "999", "/", "9", "=", "111"
+    };
+    List<string> expressao7 = new List<string>
+    {
+        "360", "/", "9", "=", "4"
+    };
+    List<string> expressao8 = new List<string>
+    {
+        "600", "/", "30", "=", "562"
+    };
+    List<string> expressao9 = new List<string>
+    {
+        "1000", "-", "438", "=", "562"
+    };
+    List<string> expressao10 = new List<string>
+    {
+        "1000", "-", "438", "=", "562"
+    };
+
 }
