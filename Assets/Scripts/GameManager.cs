@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         pontuacao = 0;
         // Mostra o resultado do jogador na caixa de texto
         textPontuacao.text = pontuacao.ToString();
+    }
 
     // Update is called once per frame
     void Update()
