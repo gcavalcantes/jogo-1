@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject optionPanel;
     // Mostra painel de Game over
     public GameObject gameOverPanel;
+    public GameObject quadro;
     public GameObject menuInicial;
     public GameObject menuCredito;
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
         // Variável para a pontuação
         pontuacao = 0;
         // Mostra o resultado do jogador na caixa de texto
-        textPontuacao.text = pontuacao.ToString();
+        //textPontuacao.text = pontuacao.ToString();
     }
 
     // Update is called once per frame
@@ -31,6 +32,11 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             janelaOpcoes();
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+
         }
     }
 
@@ -57,10 +63,23 @@ public class GameManager : MonoBehaviour
         
     }
 
+    // Método para iniciar jogo
+    public void iniciarJogo()
+    {
+        //SceneManager.LoadScene(1);
+    }
+
     // Método para reiniciar jogo
     public void reiniciarJogo(){
-        //SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(1);
         Time.timeScale = 1f;
+    }
+
+    public void mostrarQuadro()
+    {
+        menuInicial.SetActive(false);
+        menuCredito.SetActive(false);
+        quadro.SetActive(true);
     }
 
     public void abrirCreditos()
@@ -73,5 +92,11 @@ public class GameManager : MonoBehaviour
     {
         menuInicial.SetActive(true);
         menuCredito.SetActive(false);
+    }
+
+    //Método para sair do jogo.
+    public void sairDoJogo(){
+        Debug.Log("Clicou em SAIR");
+        Application.Quit();
     }
 }
