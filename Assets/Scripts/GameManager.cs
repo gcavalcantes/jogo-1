@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public List<GameObject> escolhas;
     public int pontuacao;
     //Variável para mostrar a pontuação na tela de jogo
     public Text textPontuacao;
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Variável para a pontuação
-        pontuacao = 0;
+        // pontuacao = 0;
         // Mostra o resultado do jogador na caixa de texto
         //textPontuacao.text = pontuacao.ToString();
     }
