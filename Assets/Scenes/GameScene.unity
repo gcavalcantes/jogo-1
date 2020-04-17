@@ -1953,7 +1953,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98048846f5fe454d8e25adbfd84cee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escolhas: []
+  escolhas:
+  - {fileID: 1537344080}
+  - {fileID: 60001000}
+  - {fileID: 805040911}
+  - {fileID: 173362871}
+  - {fileID: 1497940948}
+  - {fileID: 1780105240}
+  - {fileID: 762611467}
+  - {fileID: 2052963920}
+  - {fileID: 330213468}
+  - {fileID: 2094919815}
+  indiceEscolha: 1
+  escolha: {fileID: 0}
   pontuacao: 0
   textPontuacao: {fileID: 0}
   textPontuacaoFinal: {fileID: 0}
