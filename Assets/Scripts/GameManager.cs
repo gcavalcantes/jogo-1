@@ -21,9 +21,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Variável para a pontuação
-        pontuacao = 0;
+        // pontuacao = 0;
         // Mostra o resultado do jogador na caixa de texto
-        textPontuacao.text = pontuacao.ToString();
+        // textPontuacao.text = pontuacao.ToString();
     }
 
     // Update is called once per frame
