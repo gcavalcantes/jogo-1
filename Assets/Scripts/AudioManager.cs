@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource somGameOver;
 
-    public AudioSource musica;
+    public AudioSource musicaDeFundo;
 
     public AudioSource respostaCorreta;
 
