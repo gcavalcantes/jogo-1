@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     // Variável para mostrar a pontuação final na tela de game over
     public Text textPontuacaoFinal;
     public bool jogoPausado;
-    public GameObject optionPanel;
     // Mostra painel de Game over
     public GameObject gameOverPanel;
     public GameObject quadro;
@@ -42,13 +41,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            janelaOpcoes();
-        }
-
-        if(Input.GetMouseButtonDown(0))
-        {
-            
+        if (tentativas == 0) {
+            quadro.SetActive(false);
+            gameOverPanel.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Return)) {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            }
         }
         tempoAtual -= Time.deltaTime;
 
@@ -78,6 +76,10 @@ public class GameManager : MonoBehaviour
                 textTentativas.text = tentativas.ToString();
                 FindObjectOfType<AudioManager>().respostaIncorreta.Play();
             }
+            if (tentativas == 0) {
+                FindObjectOfType<AudioManager>().musicaDeFundo.Stop();
+                FindObjectOfType<AudioManager>().somGameOver.Play();
+            }
         }
         if (tempoAtual <= 0 && indiceExpressao>=5) {
             listaDeExpressoes[0].SetActive(false);
@@ -90,22 +92,6 @@ public class GameManager : MonoBehaviour
     {
         pontuacao++;
         textPontuacao.text = pontuacao.ToString();
-    }
-
-    // Método da janela de opções (em jogo)
-    public void janelaOpcoes()
-    {
-        if (jogoPausado)
-        {
-            jogoPausado = false;
-            // Desativa a tela de opções
-            optionPanel.SetActive(false);
-        } else {
-            jogoPausado = true;
-            // Ativa a tela de opções
-            optionPanel.SetActive(true);
-        }
-        
     }
 
     // Método para iniciar jogo
