@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public bool lista2 =false;
     public List<GameObject> listaDeExpressoes;
     public GameObject expressao;
     public List<GameObject> expressoes;
@@ -77,6 +78,10 @@ public class GameManager : MonoBehaviour
                 textTentativas.text = tentativas.ToString();
                 FindObjectOfType<AudioManager>().respostaIncorreta.Play();
             }
+        }
+        if (tempoAtual <= 0 && indiceExpressao>=5) {
+            listaDeExpressoes[0].SetActive(false);
+            listaDeExpressoes[1].SetActive(true);
         }
     }
 

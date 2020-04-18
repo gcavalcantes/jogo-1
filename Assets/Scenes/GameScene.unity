@@ -872,7 +872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &461048050
 RectTransform:
   m_ObjectHideFlags: 0
@@ -906,6 +906,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 600 / 30 = 562
   resposta: {fileID: 2052963920}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!114 &461048052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1042,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 1000 - 438 = 562
   resposta: {fileID: 330213468}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1221,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 450 / 50 = 9
   resposta: {fileID: 805040911}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!1 &691212025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,6 +1317,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 20 - 373 = -353
   resposta: {fileID: 1497940948}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!1 &760407001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1413,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 8 + 8 = 16
   resposta: {fileID: 1780105240}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!1 &762611467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,7 +1934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1038012986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1948,6 +1968,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 999 / 9 = 111
   resposta: {fileID: 60001000}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!114 &1038012988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2162,6 +2186,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 789 * 11 = 8679
   resposta: {fileID: 1537344080}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!1 &1244506746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,7 +2208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1244506747
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2214,6 +2242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 360 / 90 = 4
   resposta: {fileID: 2094919815}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!114 &1244506749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,7 +2518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1340259745
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2520,6 +2552,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 94 * 13 = 562
   resposta: {fileID: 762611467}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!114 &1340259747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2667,6 +2703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98048846f5fe454d8e25adbfd84cee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lista2: 0
   listaDeExpressoes:
   - {fileID: 126964185}
   - {fileID: 1115785090}
@@ -3079,7 +3116,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3265,7 +3302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2001946000
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3299,6 +3336,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: 613 - 605 = 8
   resposta: {fileID: 173362871}
+  tempoAcertou: 1.5
+  acertou: 0
+  tempoMostrar: 1.5
+  mostrar: 0
 --- !u!114 &2001946002
 MonoBehaviour:
   m_ObjectHideFlags: 0
