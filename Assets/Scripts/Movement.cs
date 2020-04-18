@@ -23,6 +23,6 @@ public class Movement : MonoBehaviour
     {
         // Vector2.MoveTowards(Vector2 current, Vector2 target, float maxDistanceDelta);
         Vector2 dest = new Vector2(destination.transform.position.x, destination.transform.position.y-30);
-        handWithChalk.transform.position = Vector2.MoveTowards(handWithChalk.transform.position, dest, 10.0f);
+        handWithChalk.transform.position = Vector2.MoveTowards(handWithChalk.transform.position, dest, 4.0f);
     }
 }

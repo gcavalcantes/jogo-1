@@ -6,8 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public List<GameObject> listaDeExpressoes;
+    public GameObject expressao;
+    public List<GameObject> expressoes;
+    public int indiceExpressao;
+    public int tentativas;
+    public Text textTentativas;
+    public float tempoAteEscolher;
+    public float tempoAtual;
     public List<GameObject> escolhas;
-    public int indiceEscolha = 1;
+    public int indiceEscolha = 0;
     public GameObject escolha;
     public int pontuacao;
     //Variável para mostrar a pontuação na tela de jogo
@@ -41,18 +49,28 @@ public class GameManager : MonoBehaviour
         {
 
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+        tempoAtual -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && tempoAtual <= 0) {
+            tempoAtual = 0.25f;
             indiceEscolha = (indiceEscolha + 1) % 10;
             escolha = escolhas[indiceEscolha];
             FindObjectOfType<Movement>().destination = escolha;
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow)) {
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && tempoAtual <= 0) {
+            tempoAtual = 0.25f;
             indiceEscolha = (indiceEscolha + 9) % 10;
             escolha = escolhas[indiceEscolha];
             FindObjectOfType<Movement>().destination = escolha;
         }
         if (Input.GetKeyDown(KeyCode.Return)) {
-            
+            if (expressao.GetComponent<Expressao>().resposta == escolha){
+                FindObjectOfType<Movement>().destination = expressao;
+                tempoAtual = tempoAteEscolher;
+            } else {
+                tentativas -= 1;
+                textTentativas.text = tentativas.ToString();
+            }
         }
     }
 
