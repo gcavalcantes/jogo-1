@@ -66,10 +66,16 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return)) {
             if (expressao.GetComponent<Expressao>().resposta == escolha){
                 FindObjectOfType<Movement>().destination = expressao;
+                expressao.GetComponent<Expressao>().acertou = true;
+                indiceExpressao += 1;
+                expressao = expressoes[indiceExpressao];
+                expressao.SetActive(true);
                 tempoAtual = tempoAteEscolher;
+                FindObjectOfType<AudioManager>().respostaCorreta.Play();
             } else {
                 tentativas -= 1;
                 textTentativas.text = tentativas.ToString();
+                FindObjectOfType<AudioManager>().respostaIncorreta.Play();
             }
         }
     }
