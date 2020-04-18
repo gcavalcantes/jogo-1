@@ -43,7 +43,7 @@ public class math_exp : MonoBehaviour
     };
     List<string> expressao7 = new List<string>
     {
-        "360", "/", "9", "=", "4"
+        "360", "/", "90", "=", "4"
     };
     List<string> expressao8 = new List<string>
     {
