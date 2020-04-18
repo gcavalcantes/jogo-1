@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-
+            
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             indiceEscolha = (indiceEscolha + 1) % 10;
@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
 
     public void mostrarQuadro()
     {
+        FindObjectOfType<AudioManager>().musicaDeFundo.Play();
         menuInicial.SetActive(false);
         menuCredito.SetActive(false);
         quadro.SetActive(true);
